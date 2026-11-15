@@ -1,0 +1,16 @@
+name: CI
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run CI check
+        run: echo "CI workflow ran successfully after push."
